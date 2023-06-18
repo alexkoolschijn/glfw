@@ -73,11 +73,6 @@ project "GLFW"
 			"_CRT_SECURE_NO_WARNINGS"
 		}
 
-		links
-		{
-			"Dwmapi.lib"
-		}
-
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
@@ -85,3 +80,7 @@ project "GLFW"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+	filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+	symbols "off"
